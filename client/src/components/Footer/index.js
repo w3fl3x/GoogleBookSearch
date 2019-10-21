@@ -3,7 +3,7 @@ import './index.css';
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer>
             <hr />
             <p >
                 <i className="fab fa-github" /> Built using React.js
