@@ -1,9 +1,12 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
+const cors = require("cors");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
+
+app.use(cors());
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
@@ -18,7 +21,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds335668.mlab.com:35668/heroku_rgbvlbzl",
+  process.env.MONGODB_URI || "mongod://localhost/googlebooks",
   {
     useCreateIndex: true,
     useNewUrlParser: true
