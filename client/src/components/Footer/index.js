@@ -1,15 +1,12 @@
 import React from "react";
-import './index.css';
+import "./style.css";
 
-function Footer() {
-    return (
-        <footer>
-            <hr />
-            <p >
-                <i className="fab fa-github" /> Built using React.js
-            </p>
-        </footer>
-    );
-}
+const Footer = () => {
+  return (
+    <footer className="footer navbar-fixed-bottom has-background-tan text-center heading-subtitle">
+      Built using React.js
+    </footer>
+  );
+};
 
 export default Footer;
